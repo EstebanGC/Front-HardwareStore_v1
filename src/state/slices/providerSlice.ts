@@ -19,10 +19,12 @@ const providerSlice = createSlice({
 
     initialState, 
     reducers: {
-        createProvider(state, action){state.push(action.payload)}
+        createProvider(state, action){state.push(action.payload)},
+        getAllProviders(state,action){return action.payload}
     }
 })
 
-export const {createProvider}=providerSlice.actions
+
+export const {createProvider, getAllProviders}=providerSlice.actions
 export type {providertp}
 export default providerSlice.reducer 
