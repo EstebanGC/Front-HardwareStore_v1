@@ -7,6 +7,7 @@ const addProduct = async(
     minUnits: number,
     maxUnits: number, 
     availableUnits: number,
+    providers: string,
     dispatch: any) => {
 
         const productFromForm = {
@@ -15,7 +16,8 @@ const addProduct = async(
             productDescription: productDescription,
             minUnits: minUnits,
             maxUnits: maxUnits, 
-            availableUnits: availableUnits
+            availableUnits: availableUnits,
+            providers: providers
         }
 
         let saveProduct = await fetch('http://localhost:8080/create/product',

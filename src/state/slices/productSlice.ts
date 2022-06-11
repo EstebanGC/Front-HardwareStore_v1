@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { providertp } from "./providerSlice";
 
 type producttp = {
     productName: string, 
@@ -6,20 +7,11 @@ type producttp = {
     productDescription: string,
     minUnits: number,
     maxUnits: number, 
-    availableUnits: number
-    //providers
+    availableUnits: number,
+    providers: string
 }
 
-const initialState: producttp[] = [
-    {
-        productName: "Prod1", 
-        productPrice: 20,
-        productDescription: "Great",
-        minUnits: 15,
-        maxUnits: 95, 
-        availableUnits: 35
-    }
-]
+const initialState: producttp[] = []
 
 const productSlice = createSlice({
     name: "product",
@@ -31,6 +23,6 @@ const productSlice = createSlice({
     }
 })
 
-export const {createProduct, getAllProducts}=productSlice.actions
+export const {createProduct, getAllProducts} = productSlice.actions
 export type {producttp}
 export default productSlice.reducer
