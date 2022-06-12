@@ -5,9 +5,6 @@ import { providertp } from '../state/slices/providerSlice'
 import { statetp } from '../state/store'
 import { ListProduct } from './ListProduct'
 
-
-
-
 const FormProduct = () => {
 
     const dispatch = useDispatch()
@@ -79,7 +76,6 @@ const FormProduct = () => {
             <ListProduct/>
         </div>
     )
-
 }
 
 export default FormProduct

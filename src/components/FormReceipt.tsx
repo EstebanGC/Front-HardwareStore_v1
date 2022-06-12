@@ -21,7 +21,7 @@ const FormReceipt = () => {
     const [date, setDate] = useState("")
     const onRecDateChange = (e:React.ChangeEvent<HTMLInputElement>) => setDate(e.target.value)
     
-    const createReceiupt = (e:React.FormEvent<HTMLButtonElement>) => {
+    const createReceipt = (e:React.FormEvent<HTMLButtonElement>) => {
         e.preventDefault()
         addReceipt(receiptProviderName, parseInt(units), productId, date, dispatch)
         setReceiptProviderName("")

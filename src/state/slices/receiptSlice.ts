@@ -5,13 +5,13 @@ type receipttp = {
     units: number,
     productId: string,
     date: string,
-    
 }
 
 const initialState: receipttp[] = []
 
 const receiptSlice = createSlice({
     name:"receipt",
+    
     initialState,
     reducers: {
         createReceipt(state,action){state.push(action.payload)},
