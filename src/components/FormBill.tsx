@@ -2,6 +2,7 @@ import React, { ReactSVG, useState } from 'react'
 import  { useDispatch, useSelector } from 'react-redux'
 import addBill from '../actions/addBill'
 import { ListBill } from './ListBill'
+import "../styles/FormBill.css"
 
 
 const FormBill = () => {
@@ -35,7 +36,7 @@ const FormBill = () => {
 
     return (
         <div>
-            <form action=''>
+            <form action='' className='form-bill'>
                 <label>Date</label>
                 <input onChange={onBillDateChange} type="text" name="date" value={date} />
                 <br/>
@@ -51,8 +52,9 @@ const FormBill = () => {
                 <label>Products sold</label>
                 <input onChange={onBillProductsSoldChange} type="text" name="productsSold" value={productsSold} />
                 <br/>
-                <button onClick={createBill} type="submit">Add Bill</button>
+                <button className='bill-button' onClick={createBill} type="submit">Add Bill</button>
             </form>
+            <hr></hr>
             <h1>Bill</h1>
             <ListBill/>
         </div>
