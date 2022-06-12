@@ -1,17 +1,19 @@
 import React, {ReactSVG, useState } from 'react'
 import  { useDispatch, useSelector } from 'react-redux'
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebaseConfig"
 
-const LogIn: React.FunctionComponent = () => {
+const FormLogIn: React.FunctionComponent = () => {
+
     const dispatch = useDispatch()
 
     const [userName, setUserName] = useState("")
-    const [password, setPassword] = userState("")
+    const [password, setPassword] = useState("")
     
-
     const logInForm = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>)=> {
         e.preventDefault()
 
-        signEmailPassword(auth, userName, password)
+        signInWithEmailAndPassword(auth, userName, password)
         .then((userCredential) => {
             const user = userCredential.user;
         })
@@ -23,7 +25,7 @@ const LogIn: React.FunctionComponent = () => {
         setPassword('')
         setUserName('')
     }
-    }
+
 
     return (
         <div>
@@ -31,7 +33,23 @@ const LogIn: React.FunctionComponent = () => {
             <form>
                 <label htmlFor='userName'>Username</label>
                 <br/>
+                <input 
+          onChange={(e) => setUserName(e.target.value)}
+          type="text" 
+          name="username"
+          value={userName}
+        /><br />
+        <label htmlFor="password">Password</label><br />
+        <input 
+          onChange={(e) => setPassword(e.target.value)}
+          type="password" 
+          name="password"
+          value={password}
+        /><br />
+        <button onClick={(e) => logInForm(e)}>Log In</button><br />
             </form>
         </div>
-    )
-}
+    );
+};
+
+export default FormLogIn
