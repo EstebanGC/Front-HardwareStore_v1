@@ -1,5 +1,5 @@
 const getReceipt = async() => {
-    let res = await fetch('http://localhost:8080/getallreceipts')
+    let res = await fetch('https://hardwarestoresofkau.herokuapp.com/getallreceipts')
     let data = await res.json()
 
     return data

@@ -1,5 +1,5 @@
 const getBill = async () => {
-    let res = await fetch('http://localhost:8080/getallbills')
+    let res = await fetch('https://hardwarestoresofkau.herokuapp.com/getallbills')
     let data = await res.json()
 
     return data

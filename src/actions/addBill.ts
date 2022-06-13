@@ -17,7 +17,7 @@ const addBill = async(
             totalSale: totalSale
         }
 
-        let saveBill = await fetch('http://localhost:8080/create/bill',
+        let saveBill = await fetch('https://hardwarestoresofkau.herokuapp.com/create/bill',
         {
             method: 'POST',
             headers: {

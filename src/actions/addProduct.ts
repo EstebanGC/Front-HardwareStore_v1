@@ -20,7 +20,7 @@ const addProduct = async(
             providers: providers
         }
 
-        let saveProduct = await fetch('http://localhost:8080/create/product',
+        let saveProduct = await fetch('https://hardwarestoresofkau.herokuapp.com/create/product',
         {
             method: 'POST',
             headers: {

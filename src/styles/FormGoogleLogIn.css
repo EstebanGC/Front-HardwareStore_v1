@@ -1,0 +1,8 @@
+.google-bttn {
+    width: fit-content;
+    margin: auto;
+    border-radius: 7%;
+    background-color: red;
+    color: white;
+    border: none;
+}

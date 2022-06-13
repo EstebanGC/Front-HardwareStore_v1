@@ -12,7 +12,7 @@ const addProvider = async(
         passport: passport
     }
 
-    let saveProvider = await fetch('http://localhost:8080/create/provider',
+    let saveProvider = await fetch('https://hardwarestoresofkau.herokuapp.com/create/provider',
     {
         method: 'POST',
         headers: {

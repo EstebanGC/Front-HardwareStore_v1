@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import getReceipt from '../actions/getReceipt'
-import { getAllReceipts } from '../state/slices/receiptSlice'
+import providerSlice from '../state/slices/providerSlice'
+import { getAllReceipts, receipttp } from '../state/slices/receiptSlice'
 import { statetp } from '../state/store'
 
 export const ListReceipt = () => {
 
-    const allReceipts = useSelector((state:statetp)=> state.receipt)
+    const allReceipts = useSelector((state: statetp) => state.receipt)
 
     const dispatch = useDispatch()
 
@@ -16,13 +17,14 @@ export const ListReceipt = () => {
             (receipts) => {
                 dispatch(getAllReceipts(receipts))
             }
-    )
-            
+        )
+
     }, [])
 
     return (
         <div>
-            
+            {allReceipts.map((receipt: receipttp) =>
+                <h1>{receipt.providers}<br />{receipt.units}<br />{receipt.date}</h1>)}
         </div>
     )
 }

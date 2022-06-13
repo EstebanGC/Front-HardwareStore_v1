@@ -14,7 +14,7 @@ const addReceipt = async (
             date: date
         }
 
-        let saveReceipt = await fetch('http://localhost:8080/create/receipt',
+        let saveReceipt = await fetch('https://hardwarestoresofkau.herokuapp.com/create/receipt',
         {
             method:'POST',
             headers: {
