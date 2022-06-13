@@ -4,7 +4,7 @@ import { auth } from '../firebaseConfig'
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logInInReducer } from '../state/slices/logInSlice';
-import '../styles/FormSingi.css'
+import '../styles/FormSingin.css'
 
 
 const FormSignIn = () => {
