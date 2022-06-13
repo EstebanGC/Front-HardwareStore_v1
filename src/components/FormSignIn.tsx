@@ -4,6 +4,7 @@ import { auth } from '../firebaseConfig'
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logInInReducer } from '../state/slices/logInSlice';
+import '../styles/FormSingi.css'
 
 
 const FormSignIn = () => {
@@ -55,7 +56,7 @@ const dispatch = useDispatch();
   return (
     <div>
       <h1>Sign In</h1>
-      <form>
+      <form className='singin-form'>
         <label htmlFor="username">Username</label><br />
         <input 
           onChange={(e) => setUserName(e.target.value)}  
@@ -70,7 +71,7 @@ const dispatch = useDispatch();
           name="password"
           value={password}
           /><br />
-        <button onClick={(e) => signInForm(e)}>Sign in</button><br />
+        <button className='singin-bttn' onClick={(e) => signInForm(e)}>Sign in</button><br />
       </form>
     </div>
   )
