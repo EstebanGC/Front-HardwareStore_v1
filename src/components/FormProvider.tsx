@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import addProvider from '../actions/addProvider'
 import { statetp } from '../state/store'
 import ListProvider from './ListProvider'
+import '../styles/FormProvider.css'
 
 const FormProvider = () => {
 
@@ -27,7 +28,7 @@ const FormProvider = () => {
     }
     return (
         <div>
-            <form action=''>
+            <form action='' className='provider-form'>
                 <label>Name</label>
                 <input onChange={onProvNameChange} type="text" name="providerName" value={providerName} />
                 <br/>
@@ -37,8 +38,9 @@ const FormProvider = () => {
                 <label>Passport</label>
                 <input onChange={onProvPassportChange} type="text" name="providerPassport" value={providerPassport}/>
                 <br/>
-                <button onClick={createProvider} type="submit">Add Provider</button>
+                <button className='provider-bttn' onClick={createProvider} type="submit">Add Provider</button>
             </form>
+            <hr></hr>
             <h1>Providers</h1>
             <ListProvider/>
         </div>

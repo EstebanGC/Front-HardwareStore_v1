@@ -4,6 +4,7 @@ import addProduct from '../actions/addProduct'
 import { providertp } from '../state/slices/providerSlice'
 import { statetp } from '../state/store'
 import { ListProduct } from './ListProduct'
+import '../styles/FormProduct.css'
 
 const FormProduct = () => {
 
@@ -47,7 +48,7 @@ const FormProduct = () => {
 
     return (
         <div>
-            <form action=''>
+            <form action='' className='pdct-form'>
                 <label>Name</label>
                 <input onChange={onProdNameChange} type="text" name="productName" value={productName} />
                 <br/>
@@ -69,9 +70,9 @@ const FormProduct = () => {
                 <label>Provider name</label>
                 <input onChange={onProdProviderName} type="text" name="productProviderName" value={productProviderName}/>
                 <br/>
-                <button onClick={createProduct} type="submit">Add Product</button>
-
+                <button className='pdct-bttn' onClick={createProduct} type="submit">Add Product</button>
             </form>
+            <hr></hr>
             <h1>Products</h1>
             <ListProduct/>
         </div>

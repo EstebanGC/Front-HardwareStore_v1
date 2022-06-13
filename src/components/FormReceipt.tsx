@@ -3,6 +3,7 @@ import  { useDispatch, useSelector } from 'react-redux'
 import addReceipt from '../actions/addReceipt'
 import { createReceipt } from '../state/slices/receiptSlice'
 import { ListReceipt } from './ListReceipt'
+import '../styles/FormReceipt.css'
 
 
 const FormReceipt = () => {
@@ -32,7 +33,7 @@ const FormReceipt = () => {
 
     return (
         <div>
-            <form action=''>
+            <form action='' className='receipt-form'>
                 <label>Provider name</label>
                 <input onChange={onRecProviderNameChange} type="text" name="receiptProviderName" value={receiptProviderName}/>
                 <br/>
@@ -45,7 +46,7 @@ const FormReceipt = () => {
                 <label>Date</label>
                 <input onChange={onRecDateChange} type="text" name="date" value={date}/>
                 <br/>
-                <button onClick={createReceipt} type="submit">Add Receipt</button>
+                <button className='receipt-bttn' onClick={createReceipt} type="submit">Add Receipt</button>
             </form>
             <h1>Receipts</h1>
             <ListReceipt/>
