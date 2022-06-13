@@ -20,7 +20,7 @@ export const ListProduct = () => {
   return (
     <div>
     {allProducts.map((product:producttp) =>  
-    <h1>{product.productDescription}<br/>{product.productPrice}<br/>{product.providers}</h1>)}
+    <h3>{product.productDescription}<br/>{product.productPrice}<br/>{product.providers}</h3>)}
     </div>
   )
 

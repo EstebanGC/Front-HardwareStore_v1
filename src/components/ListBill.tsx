@@ -21,7 +21,7 @@ export const ListBill = () => {
     return (
         <div>
             {allBills.map((bill:billtp) => 
-            <h1>{bill.sellerName}<br/>{bill.clientName}<br/>{bill.totalSale}<br/>{bill.date}</h1>)}
+            <h3>{bill.sellerName}<br/>{bill.clientName}<br/>{bill.totalSale}<br/>{bill.date}</h3>)}
         </div>
     )
 }

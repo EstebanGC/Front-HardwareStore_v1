@@ -24,7 +24,7 @@ export const ListReceipt = () => {
     return (
         <div>
             {allReceipts.map((receipt: receipttp) =>
-                <h1>{receipt.providers}<br />{receipt.units}<br />{receipt.date}</h1>)}
+                <h3>{receipt.providers}<br />{receipt.units}<br />{receipt.date}</h3>)}
         </div>
     )
 }

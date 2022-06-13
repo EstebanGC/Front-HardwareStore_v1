@@ -19,7 +19,7 @@ useEffect(()=> {
 },[])
     return (  
     <div>
-      {allProviders.map((provider:providertp) => <h1>{provider.providerName}<br/>{provider.email}</h1> )}
+      {allProviders.map((provider:providertp) => <h3>{provider.providerName}<br/>{provider.email}</h3> )}
     </div>
   )
 }
